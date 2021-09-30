@@ -1,3 +1,4 @@
+const { expect } = require("@jest/globals");
 const Player = require("../lib/Player");
 const Potion = require("../lib/Potion");
 
@@ -43,11 +44,24 @@ test("get player's health value", () => {
 });
 
 test("checks if player is alive or not", () => {
-    const player = new Player("Sister");
+  const player = new Player("Sister");
 
-    expect(player.isAlive()).toBeTruthy();
+  expect(player.isAlive()).toBeTruthy();
 
-    player.health = 0;
+  player.health = 0;
 
-    expect(player.isAlive()).toBeFalsy();
-})
+  expect(player.isAlive()).toBeFalsy();
+});
+
+test("subrtracts from player's health", () => {
+  const player = new Player("Elise");
+  const oldHealth = player.health;
+
+  player.reduceHealth(5);
+
+  expect(player.health).toBe(oldHealth - 5);
+
+  player.reduceHealth(99999);
+
+  expect(player.health).toBe(0);
+});
