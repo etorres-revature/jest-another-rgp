@@ -1,5 +1,6 @@
 const { expect } = require("@jest/globals");
 const Enemy = require("../lib/Enemy");
+const Enemy = require("../lib/Enemy");
 const Potion = require("../lib/Potion");
 
 jest.mock("../lib/Potion");
@@ -52,4 +53,11 @@ test("subtracts from enemy's health", () => {
   enemy.reduceHealth(99999);
 
   expect(enemy.health).toBe(0);
+});
+
+test("gets a description of enemy", () => {
+  const Enemy = new Enemy("goblin", "sword");
+
+  expect(enemy.getDescription()).toEqual(expect.stringContaining("goblin"));
+  expect(enemy.getDescription()).toEqual(expect.stringContaining("sword"));
 });
