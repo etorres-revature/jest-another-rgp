@@ -1,0 +1,30 @@
+{
+  "name": "jest-another-rgp",
+  "version": "1.0.0",
+  "description": "Command line RPG game with jest tests incorporated.",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etorres-revature/jest-another-rgp.git"
+  },
+  "keywords": [
+    "jest",
+    "rpg",
+    "node"
+  ],
+  "author": "Eric D. Torres",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/etorres-revature/jest-another-rgp/issues"
+  },
+  "homepage": "https://github.com/etorres-revature/jest-another-rgp#readme",
+  "dependencies": {
+    "inquirer": "^8.1.5"
+  },
+  "devDependencies": {
+    "jest": "^27.2.4"
+  }
+}
